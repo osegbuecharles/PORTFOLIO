@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osegbue Charles</title>
+   
+    <!-- BOOTSTRAP  -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
+    
+    <!-- FONTAWESOME -->
+    <script src='https://kit.fontawesome.com/0c076d4f40.js' crossorigin='anonymous'></script>
+    
+    <!-- DATA AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">      
+    
+    <!-- CURSOR ANIMATION JS DEPENDENCY FILES -->
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>  
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+    
+    <!-- GLOBE DEPENDENCY JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+</head>
+<body id="animated-body" class="scrollable">  
+    
+    <!-- THE ANIMATION FOLLOWING THE CURSOR ON PC -->
+    <canvas id="animated-canvas"></canvas>
+
+    <!-- THE GLOBE NUCLEUS AT THE CENTER OF THE PAGE -->
+    <div id="globe_div" class="m-auto" >
+        <div id="canvas_container" class="m-auto "></div>
+    </div>
+
+    <!-- MENUS -->
+   <div id="menu-left" class="menu">
+        <div class="menus menu_left" id="about" data-aos="zoom-in-right" data-aos-delay="300">
+            About Me
+        </div>        
+
+        <div class="menus menu_left" id="resume" data-aos="zoom-in-right" data-aos-delay="450">
+            My Resume
+        </div>
+     
+        
+        <div class="menus menu_left" id="services" data-aos="zoom-in-right" data-aos-delay="600">
+            Services
+        </div>
+
+        <div class="menus menu_left" id="contact" data-aos="zoom-in-right" data-aos-delay="750">
+            Contact Me
+        </div>
+        
+   </div>
+
+   <div id="middle_image">
+        <img class="img-fluid mx-auto d-block" id="me_img" src="assets/me.png" />
+   </div>
+
+   <div id="menu-right" class="menu">
+        <div class="menus menu_right" id="blog" data-aos="zoom-in-left" data-aos-delay="300">
+            Blog
+        </div>
+
+        <div class="menus menu_right" id="devfolio" data-aos="zoom-in-left" data-aos-delay="450">
+            Devfolio
+        </div>
+
+        <div class="menus menu_right" id="portfolio" data-aos="zoom-in-left" data-aos-delay="600">
+            Portfolio
+        </div>
+
+        <div class="menus menu_right" id="hireme" data-aos="zoom-in-left" data-aos-delay="750">
+            Hire Me
+        </div>
+
+   </div>
+
+
+    
+    
+    
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/globe.js"></script>
+<script src="js/animate.js"></script>
+</html>

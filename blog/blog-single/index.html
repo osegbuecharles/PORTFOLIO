@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osegbue Charles | Blog</title>
+  <link rel="shortcut icon" href="../../assets/me.png" type="image/x-icon">
+  <meta name="description" content="Hey There!, I am Osegbue Charles, a full stack developer">
+  <meta name="keywords" content=" Osegbue Charles, Web Developer, Full Stack Developer, Charles">
+  <meta name="author" content="Osegbue Charles">
+
+  <!-- Bootstrap CSS cdn-->
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
+  <!-- Font awesome cdn -->
+  <script src='https://kit.fontawesome.com/0c076d4f40.js' crossorigin='anonymous'></script>
+
+  <!-- data aos css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;0,900;1,400&family=Roboto:wght@100;400&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/blog-single.css" rel="stylesheet">
+  <script src="../api.js"></script>
+
+  <!-- ANIMATED.CSS TO ANIMATE BOOTSTRAP MODALS OR ANY OTHER HTML ELEMENT-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">  
+
+  <!-- CK EDITOR FOR SPECIAL TEXT AREA -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+
+</head>
+
+<body class="scrollable">
+
+  <!--Header-->
+  <header class="px-0 py-2 mx-0">
+    <div class="row container-fluid mx-0">
+      <div class="col-2 animate__animated animate__tada">
+        <a class="navbar-brand text-warning" href="/">{Osegbue Charles}</a>
+      </div>
+      <div class="col-10 heading">
+        Blog
+      </div>
+    </div>
+  </header>
+  <!--End Header-->
+
+  <!-- Button trigger modal -->
+  <button type="button" id="showModal" class="btn btn-primary" data-bs-toggle="modal" style="display:none"
+    data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Share Blog</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main id="mainb" class="container-fluid mx-0 px-0">
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog mt-3 container-fluid mx-0">
+      <div class="container-fluid px-3">
+        <a class="btn btn-warning text-black mb-2" href="../">Back</a>
+
+        <!--pop up Modal-->
+        <button data-toggle="modal" id="showModal" style="display:none" data-target="#shareModal"></button>
+        <!-- The Modal -->
+        <div class="modal fade" id="shareModal">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3>Share This Blog</h3>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div>
+
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container-fluid mx-0 px-0">
+
+          <article class="entry entry-single" data-aos="fade-up">
+
+            <div class="entry-img">
+              <img src="assets/img/blog-1.jpg" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="" id="blogSubject"></a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center" style="cursor:pointer"><i class="fa fa-user"></i><a
+                    id="blogAuthor"></a> </li>
+                <li class="d-flex align-items-center" style="cursor:pointer" id="blogDate"><i class="fa fa-clock"></i>
+                </li>
+                <li class="d-flex align-items-center"><i class="fa fa-eye"></i> <a id="blogView"></a></li>
+                <li class="d-flex align-items-center"><i class="fa fa-comment"></i> <a id="blogComment"></a></li>
+                <li class="d-flex align-items-center likeBlog" id="likeBlog"><i
+                    style="cursor: pointer;font-size:x-large;" class="fa fa-heart likeIcon"></i><a class="blogLike"></a>
+                </li>
+                <li class="d-flex align-items-center" id="shareBlog" style="cursor: pointer;"><i
+                    style="font-size:x-large;" class="fa fa-share"></i> <a id="blogShare"></a></li>
+              </ul>
+            </div>
+
+            <div id="blogContent" class="entry-content py-4">
+              <img src="https://media.giphy.com/media/3oeHLhzRkRX1bQQBPi/giphy.gif" class="mx-auto" />
+
+            </div>
+
+
+            <div class="entry-footer clearfix mb-3">
+              <div class="float-left">
+                <i class="icofont-folder"></i>
+                <ul class="cats">
+                  <li id="blogCategory" style="text-transform: capitalize;"></li>
+                </ul>
+
+                <i class="icofont-tags"></i>
+                <ul id="blogTag" class="tags">
+
+                </ul>
+              </div>
+
+              <div class="float-right share mt-4" id="blogShareFooter">
+
+              </div>
+
+
+
+
+            </div>
+
+            <span style="color:#8b8a8a;">
+              <i class="fa fa-heart likeBlog" id="lk" style="cursor:pointer;font-size:xx-large ;"></i>
+              &nbsp;
+              <a style="font-size: smaller;" class="blogLike"></a>
+            </span>
+
+          </article><!-- End blog entry -->
+
+          <!--
+                  <div class="blog-author clearfix" data-aos="fade-up">
+                    <img src="assets/img/blog-author.jpg" class="rounded-circle float-left" alt="">
+                    <h4>Jane Smith</h4>
+                    <div class="social-links">
+                      <a href="https://twitters.com/#"><i class="icofont-twitter"></i></a>
+                      <a href="https://facebook.com/#"><i class="icofont-facebook"></i></a>
+                      <a href="https://instagram.com/#"><i class="icofont-instagram"></i></a>
+                    </div>
+                    <p>
+                      Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+                    </p>
+                  </div>-->
+          <!-- End blog author bio -->
+
+
+
+
+          <div class="blog-comments" data-aos="fade-up">
+
+
+            <div class="reply-form mb-4 glassmorphism">
+              <h4>Leave a Reply</h4>
+              <p>Please fill all fields* </p>
+              <form id="commentForm" action="" method="post">
+
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control form-input " id="commentName" name="name"
+                    placeholder="John Doe" required>
+                  <label for="floatingInput" class="px-4 ">Your Name</label>
+                </div>
+
+                <!-- <div class="form-group">
+                    <input name="name" type="text" id="commentName" class="form-control" placeholder="Your Name*"
+                      required>
+                  </div> -->
+
+                <div class="row">
+                  <div class="col form-group">
+                    <textarea name="comment" rows="5" id="commentComment " class="form-control"
+                      placeholder="Your Comment*"></textarea>
+                  </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-warning text-black">Post Comment</button><br />
+                <div id="commentLoading" style="display:none;" class="loading spinner-border text-warning mt-3"></div>
+                <div id="commentError" style="display:none;"
+                  class="error-message mt-3 bg-danger text-white p-3 rounded">Opps! Something went wrong</div>
+                <div id="commentSent" style="display:none;" class="sent-message mt-3 bg-success text-white p-3 rounded">
+                  Comment Posted!</div>
+              </form>
+
+            </div>
+
+            <div class="glassmorphism p-3">
+              <h4 class="comments-count" id="commentCount"></h4>
+
+              <span id="blogComments">
+
+              </span>
+            </div>
+
+
+
+
+          </div><!-- End blog comments -->
+
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+
+
+
+
+  </main><!-- End #main -->
+
+  <!-- FOOTER SECTION -->
+  <footer class="mb-0 pt-4">
+    <div class="container-fluid glassmorphism mb-0 mt-4">
+      <h2 class="title">{Osegbue Charles}</h2>
+      <p class="title">I hope you are having a wonderful day! FInd me on the internet with: </p>
+      <div class="social-links">
+        <a href="tel:+2348103442322" class="phone"><i class="fa fa-phone"></i></a>
+        <a href="https://wa.me/2348103442322" class="phone"><i class="fa fa-whatsapp"></i></a>
+        <a href="mailto:osegbuecharles@gmail.com" class="phone"><i class="fa fa-at"></i></a>
+        <a href="https://web.facebook.com/messages/t/charles.osegbue" class="facebook"><i
+            class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/osegbuecharles/" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/osegbuecharles" class="linkedin"><i
+            class="fa fa-linkedin"></i></a>
+      </div>
+      <a class="btn btn-warning mt-2" href="https://paystack.com/pay/osegbuecharles">Buy me a drink!</a>
+      <div class="copyright mt-4 title">
+        © Copyright <span class="year"></span>, Osegbue Charles. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+    integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous'></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
+    integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'>
+  </script>
+  <!-- Template Main JS File -->
+  <script src="../js/blog-single.js"></script>
+</body>
+
+</html>

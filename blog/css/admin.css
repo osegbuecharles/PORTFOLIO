@@ -1,0 +1,96 @@
+
+:root{
+    --main: #050505;    
+    --secondary:#e8ab0e;
+    --primary:gold;
+}
+
+#loginbtn{
+  background-color: var(--primary);
+  color:black;
+}
+
+#main, #login{
+  display: none;
+}
+
+#welcome{
+  color:white;
+}
+
+#editProfile, #cancelProfile, #editSettings, #cancelSettings{
+  font-size: x-large;
+  cursor: pointer;
+  float:right;
+}
+
+#cancelProfile,#cancelSettings{
+  display:none;
+}
+
+#editProfile:hover, #cancelProfile:hover, #editSettings:hover, #cancelSettings:hover{
+  color:red;
+}
+
+.error_message{
+  font-size:xx-large; 
+  color:bold;
+  color:red;
+}
+
+.empty_message{
+  font-size:xx-large; 
+  text-align:center;
+  color:bold;
+  color:red;
+}
+
+.enquiry_date{
+  font-size:large;
+  font-weight:bold;
+}
+
+.divider{
+  width:0px;
+  height: 15px;
+  border: solid thin;
+  float:left;
+}
+
+#refreshButton{
+  position:fixed;
+  right: 0px;
+  top:100px;
+}
+
+.imgThumbnail{
+  width:5%;
+}
+
+.form-group{
+  margin:20px auto;
+}
+
+.nav-link{
+  color:var(--primary);
+}
+
+.nav-item{
+  margin:0 10px;
+}
+
+.nav-link.active{
+  background:var(--primary);
+  color:black;
+}
+
+.nav-link:hover{
+  background-color: var(--secondary);
+  color:black;
+}
+
+@media screen and (max-width:650px){
+  .imgThumbnail{
+    width:10%;
+  }
+}

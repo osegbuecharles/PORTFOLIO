@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osegbue Charles</title>
+    <link rel="shortcut icon" href="../assets/me.png" type="image/x-icon">
+    <meta name="description" content="Hey There!, I am Osegbue Charles, a full stack developer">
+    <meta name="keywords" content=" Osegbue Charles, Web Developer, Full Stack Developer, Charles">
+    <meta name="author" content="Osegbue Charles">
+
+    <!-- Bootstrap CSS cdn-->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
+    <!-- Font awesome cdn -->
+    <script src='https://kit.fontawesome.com/0c076d4f40.js' crossorigin='anonymous'></script>
+    
+    <!-- data aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- typed js. the library that does typing animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;0,900;1,400&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+
+    <!-- CK EDITOR FOR SPECIAL TEXT AREA -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+
+    <!-- CSS FILES FOR INTERACTIVE AUGMENTED FILE CODE SYSTEM -->
+    <link rel="stylesheet" href="https://unpkg.com/augmented-ui@2.0.0/augmented-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.css">
+
+    <!-- ANIMATED.CSS TO ANIMATE BOOTSTRAP MODALS OR ANY OTHER HTML ELEMENT-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">  
+
+    <!-- main stylesheet -->    
+    <link rel="stylesheet" href="../css/clock.css">
+    <link rel="stylesheet" href="../css/music.css">
+    <link rel="stylesheet" href="../css/augmentedfile.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    
+</head>
+<body class="scrollable">
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand text-warning animate__animated animate__tada" href="/">{Osegbue Charles}</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../#about">About</a>
+              </li>   
+              
+              <li class="nav-item">
+                <a class="nav-link" href="../#skills">Skills</a>
+              </li>   
+          
+              <li class="nav-item">
+                <a class="nav-link" href="../#services">Services</a>
+              </li>                
+
+              <li class="nav-item">
+                <a class="nav-link" href="../#contact">Contact Me</a>
+              </li>   
+
+              <li class="nav-item">
+                <a class="nav-link" href="">Portfolio</a>
+              </li>               
+
+              <li class="nav-item">
+                <a class="nav-link" href="../blog">Blog</a>
+              </li>                               
+
+            </ul>         
+            <a class="navbar-brand text-warning" href="../cv">$MY_CV</a>
+          </div>
+        </div>
+    </nav>
+
+    <!-- MUSIC BUTTON -->
+    <div class="music-button">
+        <div class="circle">
+            <span class="circle__btn">
+              <i class="fa fa-pause pause" data-bs-toggle="tooltip" data-bs-placement="top"  title="Pause Music" name="pause"></i>
+              <i class="fa fa-play play" data-bs-toggle="tooltip" data-bs-placement="top"  title="Play Music" name="play"></i>
+            </span>
+            <span class="circle__back-1 paused"></span>
+            <span class="circle__back-2 paused"></span>
+          </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="">
+        
+        <!-- HERO SECTION -->
+        <section class="container mx-auto px-4" data-aos="zoom-in-up" data-aos-delay="200">
+            <div class="row glassmorphism" >                
+                <div class="col-md-8 text-light hero-body my-auto">
+                        <h1>Welcome to my portfolio!</h1>                
+                        <p>Over the years i have worked on a variety of projects such as:<br/>
+                            <span id="typedProjects"></span>
+                        </p>                       
+                </div>
+                <div class="clock-con col-md-4 mx-auto my-4">            
+                    <div class="clock">
+                        <div class="hand hours"></div>
+                        <div class="hand minutes"></div>
+                        <div class="hand seconds"></div>
+                        <div class="point"></div>
+                        <div class="marker">
+                            <span class="marker__1"></span>
+                            <span class="marker__2"></span>
+                            <span class="marker__3"></span>
+                            <span class="marker__4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        
+        <!-- Project Modal -->
+        <div class="modal  animate__animated animate__bounceIn" id="projectModal" tabindex="-1" aria-labelledby="projects modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ms-auto" id="exampleModalLabel"></h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    <button type="button" class="btn-close" data-custom-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body scrollable px-0">
+                    <div class="container-fluid row ">
+                        <!-- CAROUSEL -->
+                        <div class="portfolio-carousel col-lg-9 px-0 px-2">
+                            <div id='carouselExampleCaptions' class='carousel slide' data-bs-ride='carousel' data-interval='5000' data-pause='hover'>
+                                <div class='carousel-indicators'>
+                                    <!-- <button type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='0' class='active'
+                                        aria-current='true' aria-label='Slide 1'></button>
+                                    <button type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='1'
+                                        aria-label='Slide 2'></button>
+                                    <button type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2'
+                                        aria-label='Slide 3'></button> -->
+                                </div>
+                                <div class='carousel-inner'>
+                                    <!-- <div class='carousel-item active'>
+                                        <img src=''  class='d-block w-100' alt='...'>
+                                        <div class='carousel-caption d-none d-md-block'>
+                                            <h5>First slide label</h5>
+                                            <p>Some representative placeholder content for the first slide.</p>
+                                        </div>
+                                    </div>
+                                    <div class='carousel-item'>
+                                        <img src=''  class='d-block w-100' alt='...'>
+                                        <div class='carousel-caption d-none d-md-block'>
+                                            <h5>Second slide label</h5>
+                                            <p>Some representative placeholder content for the second slide.</p>
+                                        </div>
+                                    </div>
+                                    <div class='carousel-item'>
+                                        <img src=''  class='d-block w-100' alt='...'>
+                                        <div class='carousel-caption d-none d-md-block'>
+                                            <h5>Third slide label</h5>
+                                            <p>Some representative placeholder content for the third slide.</p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleCaptions'
+                                    data-bs-slide='prev'>
+                                    <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+                                    <span class='visually-hidden'>Previous</span>
+                                </button>
+                                <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleCaptions'
+                                    data-bs-slide='next'>
+                                    <span class='carousel-control-next-icon' aria-hidden='true'></span>
+                                    <span class='visually-hidden'>Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- INFO-->
+                        <div class="col-lg-3 mr-0 pr-0">
+                            <div class="projectInfo"><b>Project Name: </b><span class="modal-title"></span></div>
+                            <div class="projectInfo"><b>Project Date: </b><span class="project-date"></span></div>
+                            <div class="projectInfo"><b>Project Link: </b><span class="project-link"></span></div>
+                        </div>
+
+                        <!-- DETAILS -->
+                        <div class="container project-details mt-2 glassmorphism mx-2 py-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-warning" data-custom-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- PORTFOLIO SECTION -->
+        <section class="container mx-auto px-4" data-aos="zoom-in-up" data-aos-delay="200">
+            <h1 class="section-heading">{Recent Projects}</h1>        
+            
+               <div class="glassmorphism row">
+                   
+                    <!-- CVBUILDER PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project"  data-bs-toggle="tooltip" data-bs-placement="top"  title="View CV Builder" onclick="loadProject('cvbuilder')"></i>
+                            </span>
+                            <input value="CV Builder" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    CV builder is a web application that allows you to 
+                                    create and publish custom digital CVs. 
+                                    You insert your information and select what you want people to see. 
+                                    Pick a template, select a color scheme and you can visit 
+                                    your custom link to view your digital CV as well as download it as a pdf.
+                                    This web app is also free to use!                                                                        
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- LINK CLICK PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Link Click" onclick="loadProject('linkclick')"></i>
+                            </span>
+                            <input value="Link Click" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    Link Click is essentially a link shortener. It can be used to shorten your 
+                                    links and convert them to qrcodes. You are also able to monitor your link 
+                                    and get real time information on who is clicking your link, what device 
+                                    they are using, where they are from and many more. It's free and easy to use.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- IVS PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View IVS" onclick="loadProject('ivs')"></i>
+                            </span>
+                            <input value="IVS ⭐" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    IVS is an easy free to use inventory system. 
+                                    It answers the problem of modern day organizing 
+                                    by helping you keep track of what you have. 
+                                    It can be used by every and anybody from small businesses to large companies.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- GRIND ROOF TOP PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Grind Rooftop" onclick="loadProject('grind')"></i>
+                            </span>
+                            <input value="Grind Rooftop" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    TheGrindRooftop is a day club and restaurant that occasionally host events. 
+                                    I was contracted to build a website for them to showcase their events for the week as well as their menus. 
+                                    Customers can also make a booking or reservation through the websites.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- ZANEMODELS PROJECT-->                    
+                    <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Zane Models" onclick="loadProject('zane')"></i>
+                            </span>
+                            <input value="Zane Models" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    Zane Models Website is a modelling management website. 
+                                    Aspiring models can apply through the site and be recruited. 
+                                    Recruited Models are also displayes in the sites catalog based on their gender. 
+                                    There is also a custom made blog system inbuilt to the site. 
+                                    Everything on the site is managed from the admin portal.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- AUIAA PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View AUIAA" onclick="loadProject('auiaa')"></i>
+                            </span>
+                            <input value="AUIAA" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    AUIAA is the official alumni association for my alma mata augustine universty ilara. 
+                                    I was recruited to build an official website for the organization. 
+                                    The website has information about the organization as well as various forms. 
+                                    Alumns can register and pay their dues through the website. There is an alumni directory that shows all 
+                                    registered alums and also an alumni business directory that shows businesses owned by alums. 
+                                    The site also has its own custom blog.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- IDEAL HR PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Ideal HR" onclick="loadProject('ideal')"></i>
+                            </span>
+                            <input value="Ideal HR" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    This project was one of my very first full stack projects. idealHr is a human resource company that connects
+                                    employers to suitable employees. With the world migrating to the digital age, i was contracted to make them digital.
+                                    I created a website for them where they could upload job postings and also receive contracts from companies. The site also has
+                                    its own custom blog. I was also tasked with making their company recognised on google, this required me to put them on the map and increase
+                                    their google search ranking among others.              
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+
+                    <!-- BAYMAR PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Baymar Eyecare" onclick="loadProject('baymar')"></i>
+                            </span>                                
+                            <input value="Baymar eyecare" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    Baymar Eyecare Web Application is a custom hospital management system i built for baymare eyecare and surgery center.
+                                    It allows their patients to register, book appointments and see their clinic data. It also allows the clinic 
+                                    to schedule appointments with patients and make sure no appointment is overlapping.
+                                </p>
+                                <!-- <textarea id="code" disabled>                            
+                                Zane Models Website
+                                A
+                                Zane Models Website
+                                Zane Models Website
+                                Zane Models Website
+                                Zane Models Website
+                                </textarea> -->
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>                                        
+
+               </div>
+               
+            
+
+        </section>
+        
+        <!-- MINI PROJECT SECTION -->
+        <section class="container mx-auto px-4" data-aos="zoom-in-up" data-aos-delay="200">
+            <h1 class="section-heading">{Mini Projects}</h1>        
+            
+               <div class="glassmorphism row">                
+                    
+                    <!-- Drum Kit PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Drum Kit" onclick="loadProject('drum')"></i>
+                            </span>
+                            <input value="Drum Kit" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    This is a small html and js project i made. It is basically a
+                                    website that lets you make your own custom beats on the drums i
+                                    designed.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- Simon Game PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Simon Game" onclick="loadProject('simon')"></i>
+                            </span>
+                            <input value="Simon Game" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    Simon Game is essentially a web based memory game built with html, css and js.
+                                    It tasks you to memorize the pattern of the sound and reproduce the same pattern.
+                                    Its a fun web based game that improves your memory.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                    <!-- Dice PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Dice" onclick="loadProject('dice')"></i>
+                            </span>
+                            <input value="Dice" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    It is exactly how it sounds like, its a website that rolls 2 dices that generate
+                                    random results to determine who wins. You can be player 1 or player 2.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>                   
+
+                    <!-- To do PROJECT -->
+                    <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View To do list" onclick="loadProject('todolist')"></i>
+                            </span>
+                            <input value="To do list" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    This is a Node Js application, where you can visit and add your own list name to the url to
+                                    generate a custom todo list for you. Anyone who visits the url you made up will also be able to 
+                                    view your todolist and check things off for you so be sure to use something unique like 
+                                    tdl.com/projectcustomlist1.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                     <!-- Notes PROJECT -->
+                     <div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="300">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                            <!-- <button class="dots" onclick="changeMode()" title="change mode"></button> -->
+                            <span data-bs-toggle="modal" data-bs-target="#projectModal">
+                                <i class="fa fa-eye view-project" data-bs-toggle="tooltip" data-bs-placement="top"  title="View Notes" onclick="loadProject('notes')"></i>
+                            </span>
+                            <input value="Notes" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    This is a project thats inspired by the google keeper app. Its React Application
+                                    used to keep notes. The interface makes it easy to find your notes and delete them when
+                                    you no longer need them.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                    </div>
+
+                     <!-- Secrets PROJECT -->
+                     <!-- <div class="col-md-6" data-aos="zoom-in-left" data-aos-delay="400">
+                        <div class="code-container" content="">
+                            <div class="glow-container">
+                            <div class="augs" data-augmented-ui></div>
+                            </div>
+                            <section class="augs bg" data-augmented-ui>
+                           
+                            <i class="fa fa-eye view-project" onclick="loadProject('secrets')"></i>
+                            <input value="Secrets" disabled>
+                            <div class="code highcontrast-dark scrollable px-1">
+                                <p class="project-content">
+                                    Secrets is a Node Js application i built where you can register with your google account,
+                                    and then generate a custom link to give people to write anonymous messages for you that you
+                                    can view from your dashboard.
+                                </p>                               
+                            </div>
+                            </section>
+                        </div>                  
+                      </div> -->
+                   
+               </div>
+               
+            
+
+        </section>
+
+
+    </main>
+    
+    <!-- FOOTER SECTION -->
+    <footer class="mb-0 pt-4">
+        <div class="container-fluid glassmorphism mb-0 mt-4">
+            <h2 class="title">{Osegbue Charles}</h2>
+            <p class="title">I hope you are having a wonderful day! FInd me on the internet with: </p>
+            <div class="social-links">        
+                <a href="tel:+2348103442322" class="phone"><i class="fa fa-phone"></i></a>
+                <a href="https://wa.me/2348103442322" class="phone"><i class="fa fa-whatsapp"></i></a>
+                <a href="mailto:osegbuecharles@gmail.com" class="phone"><i class="fa fa-at"></i></a>
+                <a href="https://web.facebook.com/messages/t/charles.osegbue" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/osegbuecharles/" class="instagram"><i class="fa fa-instagram"></i></a>        
+                <a href="https://www.linkedin.com/in/osegbuecharles" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <a class="btn btn-warning mt-2" href="https://paystack.com/pay/osegbuecharles">Buy me a drink!</a>
+            <div class="copyright mt-4 title">
+                © Copyright <span class="year"></span>, Osegbue Charles. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
+<script src="../js/clock.js"></script>
+<script src="../js/animatecss.js"></script>
+<!-- <script src="../js/music.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/javascript/javascript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/css/css.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.js"></script>
+<script src="../js/augmentedfile.js"></script> -->
+<script src="../js/portfolio.js"></script>
+</html>

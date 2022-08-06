@@ -1,0 +1,74 @@
+:root {
+    --main: #050505;    
+    --secondary:#e8ab0e;
+    --primary:gold;
+
+    --ck-color-base-foreground: 								var(--secondary);
+	--ck-color-base-background: 								rgba(0, 0, 0, 0.034);
+	--ck-color-base-border: 									hsl(0, 0%, 77%);
+	--ck-color-base-action: 									hsl(104, 44%, 48%);
+	--ck-color-base-focus: 										var(--secondary);
+	--ck-color-base-text: 										hsl(0, 0%, 20%);
+	--ck-color-base-active: 									var(--secondary);
+	--ck-color-base-active-focus:								var(--secondary);
+	--ck-color-base-error:										hsl(15, 100%, 43%);
+
+	/* -- Generic colors ------------------------------------------------------------------------ */
+
+	--ck-color-focus-border-coordinates: 						208, 79%, 51%;
+	--ck-color-focus-border: 									var(--secondary);
+	--ck-color-focus-outer-shadow:								hsl(207, 89%, 86%);
+	--ck-color-focus-disabled-shadow:							hsla(209, 90%, 72%,.3);
+	--ck-color-focus-error-shadow:								hsla(9,100%,56%,.3);
+	--ck-color-text: 											var(--ck-color-base-text);
+	--ck-color-shadow-drop: 									hsla(0, 0%, 0%, 0.15);
+	--ck-color-shadow-drop-active:								hsla(0, 0%, 0%, 0.2);
+	--ck-color-shadow-inner: 									hsla(0, 0%, 0%, 0.1);
+
+}
+
+#blogContent{
+    line-height: 32px;    
+}
+
+#blogContent p{
+    letter-spacing: 3px;
+    color:rgb(199, 202, 202);
+    
+}
+
+#blogTag{
+    color:white;
+}
+
+.blogLike{
+    color:gold;
+    text-decoration: none;
+}
+
+.blogLike:hover{
+    color:gold;
+}
+
+#commentName{
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    color:white;    
+}
+
+#lk:hover{
+    color:red;
+}
+
+@media screen and (max-width:510px){
+    .resImg{
+        width:80%;
+    }
+}
+
+a{
+    text-decoration: none;
+}

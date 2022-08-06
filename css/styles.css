@@ -1,0 +1,239 @@
+/* SETTING GLOBAL COLOR VARIABLES */
+:root {
+    --main: #000000;
+    --back: #3D0000;
+    --secondary:#950101;
+    --primary:#FF0000;
+}
+
+body{
+    background-color: var(--main);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233d0000' fill-opacity='0.42'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 1;
+    padding:0;
+    margin:0;
+    width:90vw;    
+}
+
+
+/* THE ANIMATION FOLLOWING THE CURSOR */
+#animated-canvas{
+    position: fixed;
+    height:100vh;
+    margin:0;
+    padding:0;    
+}
+
+
+/* THE GLOBE IN THE MIDDLE OF THE HOME SCREEN */
+#globe_div{      
+  position: absolute;
+  top: 45%;
+  left:10%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width:80vw
+}
+
+#canvas_container {    
+    width: 40vw;
+    height: 40vh;    
+}
+
+
+
+/* THE MENU ICONS ON THE HOME SCREEN */
+
+.menu{    
+    display: flex;     
+    align-items: center;
+}
+
+.menus{
+    position: absolute;   
+    z-index: 2;
+    color:white;
+    padding:15px 40px;
+    display: inline-block;
+    background-color: var(--secondary);    
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */        
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );          
+}
+
+.menus:hover{
+    cursor:pointer;        
+    animation: hovered 1s infinite ease;    
+}
+
+
+@keyframes hovered {
+    25%{
+        border-top:solid 1.5px white        
+    }
+    50%{
+        border-right:solid 1.5px white;
+    }
+    75%{
+        border-bottom:solid 1.5px white;
+    }
+    100%{
+        border-left:solid 1.5px white;
+    }
+}
+
+
+.menu_left{
+    -webkit-clip-path: polygon(100% 0, 100% 64%, 83% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 64%, 83% 100%, 0 100%, 0 0);       
+    left:25%;   
+    position: absolute;
+    top:10vh;
+    
+}
+
+.menu_left::before {
+    content: '';
+    background-color: var(--primary);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:-100%;
+    transition-property: left;
+    transition-duration: 0.3s;
+    z-index: -1;
+}
+.menu_left:hover::before {
+    top:0;
+    left:0;
+}
+
+#middle_image{
+    right:34%;     
+    width:33%;    
+    position: absolute;
+    top:5vh;    
+}
+#me_img{
+    width:auto;
+    height:17vh;
+}
+
+.menu_right{
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 17% 100%, 0 64%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 17% 100%, 0 64%, 0 0);          
+    right:30%;     
+    position: absolute;
+    top:10vh;
+     
+}
+
+.menu_right::before {
+    content: '';
+    background-color: var(--primary);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:100%;
+    transition-property: left;
+    transition-duration: 0.3s;
+    z-index: -1;
+}
+.menu_right:hover::before {
+    top:0;
+    left:0;
+}
+
+#resume{
+    margin-top:20vh;
+    margin-left: -3vw;
+}
+
+#services{
+    margin-top:40vh;
+    margin-left: -3vw;
+}
+
+#contact{
+    margin-top:60vh;    
+}
+
+#devfolio{
+    margin-top:20vh;
+    margin-right: -4vw;
+}
+
+#portfolio{
+    margin-top:40vh;
+    margin-right: -4vw;
+}
+
+#hireme{
+    margin-top:60vh;    
+}
+
+/* SCROLL BAR */
+.scrollable{
+    overflow-y: scroll;
+}
+
+/* width */
+.scrollable::-webkit-scrollbar {
+    width: 5px;
+    background-color:var(--main);
+}
+     
+/* Track */
+.scrollable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+      
+/* Handle */
+.scrollable::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 10px;
+}
+
+
+  
+
+@media  screen and (max-width:950px) {
+    #resume{
+        margin-top:18vh;
+        margin-left: -2vw;
+    }
+    
+    #services{  
+        margin-top: 36vh;      
+        margin-left: 0vw;
+    }
+    
+    #contact{
+       margin-top:54vh    
+    }
+    
+    #devfolio{ 
+        margin-top:18vh;
+        margin-right:-2vw;
+    }
+    
+    #portfolio{  
+        margin-top: 36vh;      
+        margin-right: 0vw;
+    }
+    
+    #hireme{
+        margin-top:54vh
+    }
+
+    .menu_left{
+        left:10%
+    }
+
+    .menu_right{
+        right:10%;
+    }
+}
